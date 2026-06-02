@@ -4,10 +4,7 @@
 
   "rewrites": [
     {
-      "handle": "filesystem"
-    },
-    {
-      "source": "/(.*)",
+      "source": "/((?!.*\\.).*)",
       "destination": "/index.html"
     }
   ],
@@ -55,7 +52,7 @@
 
   "redirects": [
     {
-      "source": "/index.html",
+      "source": "/index",
       "destination": "/",
       "permanent": true
     }
