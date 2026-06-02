@@ -3,10 +3,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    {
-      "source": "/:path*",
-      "destination": "/index.html"
-    }
+    { "source": "/:path*", "destination": "/index.html" }
   ],
   "headers": [
     {
@@ -28,7 +25,7 @@
       ]
     },
     {
-      "source": "/favicon.svg",
+      "source": "/favicon.ico",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" }
       ]
