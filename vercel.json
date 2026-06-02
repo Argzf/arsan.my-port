@@ -2,10 +2,16 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
 
-  "rewrites": [
+  "redirects": [
     {
       "source": "/(.*)",
-      "destination": "/"
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
     }
   ],
 
@@ -47,14 +53,6 @@
           "value": "max-age=63072000; includeSubDomains; preload"
         }
       ]
-    }
-  ],
-
-  "redirects": [
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
     }
   ]
 }
