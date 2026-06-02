@@ -2,10 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Primary Meta Tags -->
+  <title>Arsan Gzf</title>
+  <meta name="title" content="Arsan Gzf">
+  <meta name="description" content="I build stuff... mostly random. I break other random things during the daytime and write code to fix them at night.">
+  <meta name="keywords" content="Arsan Gzf, Arsan G, Gzf, ArGzf, developer, full-stack, jack of all trades, portfolio, Whisper, Whisper chat app, Node.js, React, TypeScript, Tailwind, Javascript, Frontend, Backend">
+  <meta name="author" content="Arsan Gzf">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="3 days">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Arsan G</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsan.my/">
+  <meta property="og:title" content="Arsan Gzf">
+  <meta property="og:description" content="I build stuff... mostly random. I break other random things during the daytime and write code to fix them at night.">
+  <meta property="og:image" content="/banner.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Terminal style banner">
+  <meta property="og:site_name" content="Arsan Gzf">
+  <meta property="og:locale" content="en_CA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://arsan.my/">
+  <meta name="twitter:title" content="Arsan Gzf">
+  <meta name="twitter:description" content="I build stuff... mostly random. I break other random things during the daytime and write code to fix them at night.">
+  <meta name="twitter:image" content="/banner.png">
+  <meta name="twitter:image:alt" content="Terminal style banner">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://arsan.my/">
+
+  <!-- Theme colour -->
+  <meta name="theme-color" content="#0c0e13">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Momo Trust Display & Montserrat Alternates -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap');
@@ -26,14 +63,8 @@
     }
 
     @keyframes fadeUp {
-      0% {
-        opacity: 0;
-        transform: translateY(12px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      0% { opacity: 0; transform: translateY(12px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .container {
@@ -104,7 +135,6 @@
       word-break: break-word;
     }
 
-    /* section title style */
     .section-title {
       font-size: clamp(1.1rem, 4vw, 1.3rem);
       font-weight: 550;
@@ -200,7 +230,7 @@
       color: white;
     }
 
-    /* Ecosystem section - responsive grid */
+    /* Ecosystem section */
     .ecosystem-grid {
       display: flex;
       flex-wrap: wrap;
@@ -237,7 +267,7 @@
       color: #cbd5f0;
     }
 
-    /* Contact icons - responsive, touch-friendly */
+    /* Contact icons */
     .contact-icons {
       display: flex;
       gap: clamp(1rem, 5vw, 2.5rem);
@@ -262,7 +292,6 @@
       display: inline-flex;
       align-items: center;
     }
-    /* Improve touch target on mobile */
     .contact-link-wrapper {
       display: inline-flex;
       align-items: center;
@@ -285,15 +314,12 @@
       text-decoration: none;
       vertical-align: middle;
     }
-    /* On hover (desktop) reveal text */
     .contact-item:hover .contact-link-text {
       max-width: 260px;
       margin-left: 0.5rem;
       padding: 0.2rem 0.9rem;
       background: #2a3142;
     }
-    /* On touch devices, we want the text to appear on tap? For simplicity, same hover effect works for most. 
-       Also ensure the text doesn't cause overflow on small screens. */
 
     footer {
       margin-top: 3rem;
@@ -304,17 +330,10 @@
       color: #7e8aa8;
     }
 
-    /* Tablet and desktop adjustments */
     @media (min-width: 768px) {
-      .container {
-        padding: 2rem 2rem;
-      }
-      .whisper-link {
-        transition: gap 0.2s;
-      }
+      .container { padding: 2rem 2rem; }
     }
 
-    /* Small phones: ensure no overflow, stack contact items vertically if needed */
     @media (max-width: 550px) {
       .contact-icons {
         flex-direction: column;
@@ -325,7 +344,6 @@
         width: 100%;
         justify-content: space-between;
       }
-      /* Make hover text always visible on very small? No, keep interactive but ensure readability */
       .contact-link-text {
         white-space: normal;
         max-width: none;
@@ -334,7 +352,6 @@
         margin-left: 0.5rem;
         font-size: 0.8rem;
       }
-      /* Override hover effect on small screens to always show text */
       .contact-item:hover .contact-link-text {
         max-width: none;
         margin-left: 0.5rem;
@@ -363,7 +380,7 @@
         <span class="jack-sub">Jack of all trades</span>
       </h1>
       <div class="merged-quote">
-        “I build stuff... mostly random. I break things during daytime and write code to fix it at night.”
+        “I build stuff... mostly random. I break other random things during the daytime and write code to fix them at night.”
       </div>
     </section>
 
@@ -432,7 +449,7 @@
       </div>
     </section>
 
-    <!-- Contact with real links -->
+    <!-- Contact -->
     <section id="contact">
       <div class="section-title">
         <i class="fas fa-paper-plane"></i> Contact
