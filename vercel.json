@@ -1,15 +1,17 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
+
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/"
     }
   ],
+
   "headers": [
     {
-      "source": "/assets/(.*)",
+      "source": "/assets/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -18,34 +20,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(css|js|svg|png|ico|webmanifest))",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=2592000, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/banner.png",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/favicon.ico",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
+      "source": "/:path*",
       "headers": [
         {
           "key": "X-Content-Type-Options",
@@ -74,6 +49,7 @@
       ]
     }
   ],
+
   "redirects": [
     {
       "source": "/index.html",
