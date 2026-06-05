@@ -6,7 +6,8 @@
   <title>Arsan Gzf</title>
   <meta name="title" content="Arsan Gzf">
   <meta name="description" content="I build stuff... mostly random. I break other random things during the daytime and write code to fix them at night.">
-  <meta name="keywords" content="Arsan Gzf, Arsan G, Gzf, ArGzf, developer, full-stack, jack of all trades, portfolio, Whisper, Whisper chat app, Node.js, React, TypeScript, Tailwind, Javascript, Frontend, Backend">
+  <meta name="keywords" content="Arsan Gzf, Arsan G, Gzf, ArGzf, developer, full-stack, jack of all trades, portfolio, Whisper, Whisper chat app, Arcanum, short links, file hosting, Node.js, React, TypeScript, Tailwind, Javascript, Frontend, Backend">
+  <meta name="author" content="Arsan Gzf">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   <meta name="revisit-after" content="3 days">
@@ -14,26 +15,26 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://arsan.my/">
+  <meta property="og:url" content="/">
   <meta property="og:title" content="Arsan Gzf">
   <meta property="og:description" content="I build stuff... mostly random. I break other random things during the daytime and write code to fix them at night.">
-  <meta property="og:image" content="https://about-arsan.vercel.app/banner.png?v=67">
+  <meta property="og:image" content="/banner.svg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Terminal style banner">
+  <meta property="og:image:alt" content="Terminal style thumbnail">
   <meta property="og:site_name" content="Arsan Gzf">
   <meta property="og:locale" content="en_CA">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://arsan.my/">
+  <meta name="twitter:url" content="/">
   <meta name="twitter:title" content="Arsan Gzf">
   <meta name="twitter:description" content="I build stuff... mostly random. I break other random things during the daytime and write code to fix them at night.">
-  <meta name="twitter:image" content="https://about-arsan.vercel.app/banner.png">
-  <meta name="twitter:image:alt" content="Terminal style banner">
+  <meta name="twitter:image" content="/banner.png">
+  <meta name="twitter:image:alt" content="Terminal style thumbnail">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://arsan.my/">
+  <link rel="canonical" href="/">
 
   <!-- Theme colour -->
   <meta name="theme-color" content="#0c0e13">
@@ -158,59 +159,67 @@
       min-width: 30px;
     }
 
-    /* Whisper showcase */
-    .whisper-showcase {
-      background: #10141e;
-      border-radius: 28px;
-      padding: clamp(1rem, 4vw, 1.5rem);
-      border: 1px solid #2a3448;
+    /* Projects grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.8rem;
+      margin-top: 1rem;
     }
-    .whisper-title {
-      font-family: 'Montserrat Alternates', sans-serif;
-      font-size: clamp(1.2rem, 5vw, 1.5rem);
-      font-weight: 700;
+
+    .project-card {
+      background: #131722;
+      border-radius: 28px;
+      padding: 1.5rem;
+      border: 1px solid #262e3c;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: #4a6188;
+    }
+    .project-icon {
+      font-size: 1.8rem;
+      background: #1a2332;
+      width: 48px;
+      height: 48px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 0.5rem;
-      flex-wrap: wrap;
-    }
-    .whisper-svg-icon {
-      display: inline-flex;
-      align-items: center;
       justify-content: center;
-      width: clamp(1.2rem, 5vw, 1.5rem);
-      height: clamp(1.2rem, 5vw, 1.5rem);
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      color: #8eafe6;
     }
-    .whisper-svg-icon svg {
-      width: 100%;
-      height: 100%;
+    .project-icon svg {
+      width: 1.8rem;
+      height: auto;
       stroke: #8eafe6;
-      transition: stroke 0.2s;
     }
-    .whisper-title:hover .whisper-svg-icon svg {
-      stroke: #cae0ff;
+    .project-card h3 {
+      font-size: 1.4rem;
+      margin: 0.5rem 0;
+      font-weight: 600;
     }
-    .whisper-description {
-      font-size: clamp(0.85rem, 3vw, 0.9rem);
-      color: #cbd5f0;
-      margin: 0.6rem 0;
+    .project-description {
+      font-size: 0.9rem;
+      color: #b9c3db;
+      margin: 0.75rem 0;
       line-height: 1.45;
     }
-    .whisper-tech {
+    .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin: 0.8rem 0 1rem;
+      margin: 1rem 0 1.2rem;
     }
-    .whisper-tech span {
+    .project-tags span {
       background: #202838;
-      font-size: clamp(0.65rem, 2.5vw, 0.7rem);
+      font-size: 0.7rem;
       padding: 0.2rem 0.8rem;
       border-radius: 40px;
       color: #b9c8ff;
     }
-    .whisper-link {
+    .project-link {
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -220,10 +229,10 @@
       text-decoration: none;
       color: #8eafe6;
       font-weight: 500;
-      font-size: clamp(0.8rem, 3vw, 0.85rem);
+      font-size: 0.85rem;
       transition: all 0.2s;
     }
-    .whisper-link:hover {
+    .project-link:hover {
       background: #2b3a52;
       gap: 10px;
       color: white;
@@ -266,7 +275,7 @@
       color: #cbd5f0;
     }
 
-    /* Contact icons */
+    /* Contact */
     .contact-icons {
       display: flex;
       gap: clamp(1rem, 5vw, 2.5rem);
@@ -363,6 +372,9 @@
       .ecosystem-grid {
         flex-direction: column;
       }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -383,33 +395,54 @@
       </div>
     </section>
 
-    <!-- Whisper project -->
-    <section id="whisper">
+    <!-- Projects section -->
+    <section id="projects">
       <div class="section-title">
-        <i class="fas fa-puzzle-piece"></i> Most Recent Project
+        <i class="fas fa-code-branch"></i> projects
       </div>
-      <div class="whisper-showcase">
-        <div class="whisper-info">
-          <div class="whisper-title">
-            <span class="whisper-svg-icon">
-              <svg viewBox="0 0 440 392" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M134.175 193.556H134.399M223.952 193.556H224.177M313.73 193.556H313.955M425.952 193.556C425.952 292.715 335.501 373.111 223.952 373.111C190.928 373.223 158.298 365.946 128.451 351.811L21.9524 373.111L53.2624 289.618C33.444 261.832 21.9524 228.883 21.9524 193.556C21.9524 94.396 112.404 14 223.952 14C335.501 14 425.952 94.396 425.952 193.556Z" stroke="currentColor" stroke-width="28" stroke-linecap="round"/>
-              </svg>
-            </span>
-            Whisper
+      <div class="projects-grid">
+        <!-- Whisper project -->
+        <div class="project-card">
+          <div class="project-icon">
+            <svg width="331" height="295" viewBox="0 0 331 295" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M103.897 145.111H104.061M169.452 145.111H169.616M235.008 145.111H235.172M316.952 145.111C316.952 217.517 250.905 276.222 169.452 276.222C145.338 276.304 121.511 270.99 99.7177 260.669L21.9524 276.222L44.8149 215.256C30.3435 194.966 21.9524 170.907 21.9524 145.111C21.9524 72.705 87.9996 14 169.452 14C250.905 14 316.952 72.705 316.952 145.111Z" stroke="currentColor" stroke-width="28" stroke-linecap="round"/>
+            </svg>
           </div>
-          <div class="whisper-description">
+          <h3>Whisper</h3>
+          <div class="project-description">
             A serene, anonymous chatroom. No accounts, no tracking – just quiet conversation.
           </div>
-          <div class="whisper-tech">
+          <div class="project-tags">
             <span>Node.js + Express</span>
             <span>Socket.IO</span>
             <span>TailwindCSS</span>
             <span>Vanilla JS</span>
             <span>PWA</span>
           </div>
-          <a href="https://whisper.arsan.lol" target="_blank" rel="noopener" class="whisper-link">
+          <a href="https://whisper.arsan.lol" target="_blank" rel="noopener" class="project-link">
             Visit whisper.arsan.lol <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Arcanum project -->
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-link"></i>
+          </div>
+          <h3>Arcanum</h3>
+          <div class="project-description">
+            A secure, self‑hosted utility that turns long URLs into short, memorable links and allows instant file sharing. Built for exclusive use.
+          </div>
+          <div class="project-tags">
+            <span>Next.js 14</span>
+            <span>TypeScript</span>
+            <span>Turso (libSQL)</span>
+            <span>Vercel Blob</span>
+            <span>Tailwind CSS</span>
+            <span>JWT auth</span>
+          </div>
+          <a href="https://arcanum.arsan.my" target="_blank" rel="noopener" class="project-link">
+            Visit arcanum.arsan.my <i class="fas fa-arrow-right"></i>
           </a>
         </div>
       </div>
@@ -424,12 +457,27 @@
         <div class="eco-category">
           <h3><i class="fas fa-tools"></i> Software & Tools</h3>
           <div class="eco-items">
-            <span class="eco-badge">BDScript</span>
-            <span class="eco-badge">GitHub</span>
-            <span class="eco-badge">Gimp</span>
-            <span class="eco-badge">Vercel</span>
+            <span class="eco-badge">HTML</span>
+            <span class="eco-badge">CSS</span>
+            <span class="eco-badge">JavaScript</span>
+            <span class="eco-badge">TypeScript</span>
+            <span class="eco-badge">Python</span>
+            <span class="eco-badge">Lua</span>
+            <span class="eco-badge">Java</span>
+            <span class="eco-badge">React</span>
+            <span class="eco-badge">Next.js</span>
+            <span class="eco-badge">Node.js</span>
+            <span class="eco-badge">Tailwind CSS</span>
+            <span class="eco-badge">Git</span>
+            <span class="eco-badge">Bash</span>
             <span class="eco-badge">Docker</span>
+            <span class="eco-badge">JSON</span>
+            <span class="eco-badge">Vercel</span>
+            <span class="eco-badge">Render</span>
             <span class="eco-badge">Figma</span>
+            <span class="eco-badge">Gimp</span>
+            <span class="eco-badge">GitHub</span>
+            <span class="eco-badge">BDScript</span>
             <span class="eco-badge">Tailscale</span>
           </div>
         </div>
@@ -454,22 +502,32 @@
         <i class="fas fa-paper-plane"></i> Contact
       </div>
       <div class="contact-icons">
+        <!-- Linktree -->
         <div class="contact-item">
-          <a href="mailto:gzf.dev@gmail.com" class="contact-icon contact-link-wrapper">
-            <i class="far fa-envelope"></i>
-            <span class="contact-link-text">gzf.dev@gmail.com</span>
+          <a href="/links" class="contact-icon contact-link-wrapper">
+            <i class="fas fa-link"></i>
+            <span class="contact-link-text">Linktree</span>
           </a>
         </div>
+        <!-- Discord -->
+        <div class="contact-item">
+          <a href="https://discord.com/users/935053416877666304" target="_blank" rel="noopener noreferrer" class="contact-icon contact-link-wrapper">
+            <i class="fab fa-discord"></i>
+            <span class="contact-link-text">Gzf</span>
+          </a>
+        </div>
+        <!-- GitHub -->
         <div class="contact-item">
           <a href="https://github.com/argzf" target="_blank" rel="noopener noreferrer" class="contact-icon contact-link-wrapper">
             <i class="fab fa-github"></i>
             <span class="contact-link-text">ArGzf</span>
           </a>
         </div>
+        <!-- Email -->
         <div class="contact-item">
-          <a href="https://discord.com/users/935053416877666304" target="_blank" rel="noopener noreferrer" class="contact-icon contact-link-wrapper">
-            <i class="fab fa-discord"></i>
-            <span class="contact-link-text">Gzf</span>
+          <a href="mailto:gzf.dev@gmail.com" class="contact-icon contact-link-wrapper">
+            <i class="far fa-envelope"></i>
+            <span class="contact-link-text">gzf.dev@gmail.com</span>
           </a>
         </div>
       </div>
