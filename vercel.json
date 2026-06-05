@@ -3,6 +3,14 @@
 
   "rewrites": [
     {
+      "source": "/links",
+      "destination": "/links.html"
+    },
+    {
+      "source": "/linktree",
+      "destination": "/links.html"
+    },
+    {
       "source": "/:path*",
       "destination": "/index.html"
     }
